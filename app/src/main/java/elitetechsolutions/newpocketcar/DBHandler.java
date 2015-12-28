@@ -12,7 +12,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHandler {
 
-    private static final int DATABASE_VERSION = 16;
+    private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "pocket.db";
 
     //Table Names
