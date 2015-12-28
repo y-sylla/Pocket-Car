@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:isScrollContainer="true"
+        android:focusableInTouchMode="true"
+        android:padding="50dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/activity_edit_service_entry"
+        tools:context="elitetechsolutions.pocketcar.EditServiceEntry">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:id="@+id/carName"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:paddingBottom="10dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:id="@+id/title"
+            android:text="Edit Service Entry"
+            android:textColor="#000000"
+            android:textSize="50dp"
+            android:paddingBottom="20dp"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:background="#FF0000"
+            android:id="@+id/deleteButton"
+            android:text="Delete Entry"
+            android:onClick="deleteService"
+            android:layout_marginBottom="20dp"
+            android:textAllCaps="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date"
+            android:text="Date"
+            android:textSize="20dp"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateField"
+            android:inputType="text"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mileage"
+            android:text="Mileage"
+            android:textSize="20dp"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mField"
+            android:inputType="number"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cost"
+            android:text="Cost"
+            android:textSize="20dp"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cField"
+            android:inputType="numberDecimal"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time"
+            android:text="Time Consumed"
+            android:textSize="20dp"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tField"
+            android:inputType="text"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/used"
+            android:text="Products Used"
+            android:textSize="20dp"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/puField"
+            android:inputType="text"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/owner"
+            android:text="Owner's Notes"
+            android:textSize="20dp"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/oField"
+            android:inputType="textMultiLine"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="50dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_gravity="left"
+                android:paddingRight="90dp">
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:textSize="20dp"
+                    android:background="#0099CC"
+                    android:textColor="#ffffff"
+                    android:text="Edit Barcodes"
+                    android:onClick="Barcode"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="20dp"
+                    android:id="@+id/barcodes"/>
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:textSize="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="#ffffff"
+                    android:background="#0099CC"
+                    android:text="Edit Receipts"
+                    android:textAllCaps="false"
+                    android:onClick="TakePicture"
+                    android:id="@+id/receipts"/>
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"
+                    android:background="#0099CC"
+                    android:text="Edit Pictures"
+                    android:onClick="TakePicture"
+                    android:textAllCaps="false"
+                    android:id="@+id/pictures"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/save"
+                android:text="Save Changes"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:background="#0099CC"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:onClick="SaveService"
+                android:layout_gravity="right|bottom"
+                android:textColor="#ffffff"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

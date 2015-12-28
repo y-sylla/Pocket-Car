@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="elitetechsolutions.newpocketcar">
+
+    <compatible-screens>
+        <screen
+            android:screenDensity="ldpi"
+            android:screenSize="small" />
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="large" />
+    </compatible-screens>
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="Pocket Car"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <uses-permission android:name="android.permission.CAMERA" />
+
+        <uses-feature android:name="android.hardware.camera" />
+
+        <activity
+            android:name=".WelcomePage"
+            android:label="Pocket Car"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".VehicleProfiles"
+            android:label="@string/title_activity_vehicle_profiles"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EditVehicleProfile"
+            android:label="@string/title_activity_edit_vehicle_profile"
+            android:parentActivityName=".VehicleProfiles"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elitetechsolutions.newpocketcar.VehicleProfiles" />
+        </activity>
+        <activity
+            android:name=".EditServiceEntry"
+            android:label="@string/title_activity_edit_service_entry"
+            android:parentActivityName=".VehicleProfiles"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elitetechsolutions.newpocketcar.VehicleProfiles" />
+        </activity>
+        <activity
+            android:name=".NewServiceEntry"
+            android:label="@string/title_activity_new_service_entry"
+            android:parentActivityName=".VehicleProfiles"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elitetechsolutions.newpocketcar.VehicleProfiles" />
+        </activity>
+        <activity
+            android:name=".NewVehicleProfile"
+            android:label="@string/title_activity_new_vehicle_profile"
+            android:parentActivityName=".VehicleProfiles"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elitetechsolutions.newpocketcar.VehicleProfiles" />
+        </activity>
+        <activity
+            android:name=".Notifications"
+            android:label="@string/title_activity_notifications"
+            android:parentActivityName=".VehicleProfiles"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elitetechsolutions.newpocketcar.VehicleProfiles" />
+        </activity>
+        <activity
+            android:name=".SelectServiceEntry"
+            android:label="@string/title_activity_select_service_entry"
+            android:parentActivityName=".VehicleProfiles"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elitetechsolutions.newpocketcar.VehicleProfiles" />
+        </activity>
+        <activity
+            android:name=".ViewServiceHistory"
+            android:label="@string/title_activity_view_service_history"
+            android:parentActivityName=".VehicleProfiles"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elitetechsolutions.newpocketcar.VehicleProfiles" />
+        </activity>
+        <activity
+            android:name=".Register"
+            android:label="@string/title_activity_register"
+            android:parentActivityName=".WelcomePage"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elitetechsolutions.newpocketcar.WelcomePage" />
+        </activity>
+
+        <receiver android:name=".AlertReceiver"/>
+    </application>
+
+</manifest>

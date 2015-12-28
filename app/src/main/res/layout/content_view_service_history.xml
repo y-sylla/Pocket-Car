@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:isScrollContainer="true"
+    android:focusableInTouchMode="true"
+    android:padding="50dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_view_service_history"
+    tools:context="elitetechsolutions.pocketcar.ViewServiceHistory"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:id="@+id/carName"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:paddingBottom="10dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:id="@+id/title"
+        android:text="Service History"
+        android:textAllCaps="true"
+        android:textColor="#0099CC"
+        android:textSize="50dp"
+        android:paddingBottom="20dp"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:id="@+id/entryView">
+
+        <TextView
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:paddingRight="20dp"
+            android:id="@+id/serviceText"
+            android:text="Car Name: " />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="#0099CC" />
+
+        <TextView
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:paddingLeft="20dp"
+            android:id="@+id/serviceNotes"
+            android:text="Owner&apos;s Notes" />
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="181dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/ServiceCarNameET" />
+
+    <EditText
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/ServiceOwnerNotesET"
+        android:layout_gravity="right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:id="@+id/textView"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="177dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/ServiceDateET" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mileage"
+        android:id="@+id/textView2"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="177dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/ServiceMileageET" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cost"
+        android:id="@+id/textView3"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="177dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/ServiceCostET" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time Consumed"
+        android:id="@+id/textView4"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/ServiceTCET" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Products Used"
+        android:id="@+id/textView5"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/ServiceProductUsed" />
+
+</LinearLayout>
+</ScrollView>
